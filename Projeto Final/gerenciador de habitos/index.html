@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<title>Gerenciador de Hábitos — Abas</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="style.css">
+
+<!-- Biblioteca da função confete  -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+  <header>
+    <h1>Gerenciador de Hábitos</h1>
+    <div id="welcome" class="welcome">Carregando...</div>
+  </header>
+
+  <div class="vocesabia">
+    📘 <b>Dica:</b> Estudos sugerem que repetir uma ação por <b>21 dias seguidos</b> aumenta drasticamente a chance de ela se tornar um hábito automático!
+  </div>
+
+  <div class="panel">
+    <div class="card">
+      <h3>Número total de hábitos</h3>
+      <div id="totalHabits" class="num">0</div>
+    </div>
+    <div class="card">
+      <h3>Sequências concluídas</h3>
+      <div id="totalConclusions" class="num">0</div>
+    </div>
+    <div class="card">
+      <h3>Meta concluída</h3>
+      <div id="habitsCompleted" class="num">0</div>
+    </div>
+  </div>
+
+  <div class="form">
+    <div class="row">
+      <input id="inputName" type="text" placeholder=" Digite o nome do hábito" />
+      <input id="inputMeta" type="number" placeholder=" Defina sua meta: " min="1" />
+      <button id="btnAdd">Adicionar</button>
+    </div>
+  </div>
+
+  <div class="quote" id="quoteBox"></div>
+
+  <div class="tabs-header">
+    <button class="tab-btn active" onclick="alternarAba('andamento')">📌 Em Andamento</button>
+    <button class="tab-btn" onclick="alternarAba('concluido')">🏆 Concluídos</button>
+</div>
+
+  <div id="habitList" class="mostrar-lista"></div>
+  <div id="completedList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
